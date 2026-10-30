@@ -258,6 +258,102 @@
             font-weight: 500;
         }
 
+        /* Play Store */
+        .store-section {
+            margin-bottom: 50px;
+            scroll-margin-top: 80px;
+        }
+
+        .app-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .app-card {
+            background: var(--card-bg);
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .app-head {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .app-head img {
+            width: 76px;
+            height: 76px;
+            border-radius: 18px;
+            border: 1px solid #e2e8f0;
+            flex-shrink: 0;
+            background: #f1f5f9;
+        }
+
+        .app-head h3 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            line-height: 1.25;
+        }
+
+        .app-meta {
+            font-size: 0.82rem;
+            color: var(--text-light);
+        }
+
+        .app-desc {
+            font-size: 0.93rem;
+            color: var(--text);
+        }
+
+        .shots {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            scroll-snap-type: x proximity;
+        }
+
+        .shots img {
+            height: 150px;
+            width: auto;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            flex-shrink: 0;
+            scroll-snap-align: start;
+            background: #f1f5f9;
+        }
+
+        .btn-play {
+            margin-top: auto;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: var(--primary);
+            color: white;
+            padding: 11px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.2s;
+        }
+
+        .btn-play:hover {
+            background: #0f172a;
+        }
+
+        .btn-play i {
+            color: #34d399;
+        }
+
         /* Music Gallery */
         .music-grid {
             display: grid;
@@ -342,6 +438,7 @@
             <ul class="nav-links">
                 <li><a href="#kategori">Kategori</a></li>
                 <li><a href="#tools">Alat Web</a></li>
+                <li><a href="#playstore">Play Store</a></li>
                 <li><a href="#musik">Karya Musik</a></li>
                 <li><a href="https://www.youtube.com/@midieaje" target="_blank">YouTube Channel</a></li>
             </ul>
@@ -379,6 +476,11 @@
                 <h3>Musik</h3>
                 <p>Karya lagu original, proyek audio, dan video musik.</p>
             </a>
+            <a class="category-card" href="#playstore">
+                <i class="fa-brands fa-google-play"></i>
+                <h3>Play Store</h3>
+                <p>Aplikasi Android karya Midieaje yang bisa dipasang dari Google Play.</p>
+            </a>
             <div class="category-card">
                 <i class="fa-solid fa-gamepad"></i>
                 <h3>Hobi</h3>
@@ -411,6 +513,55 @@
                     </div>
                     <a href="./silsilah-keluarga/" class="btn-tool">Buka Silsilah Keluarga</a>
                 </div>
+                <div class="tool-card">
+                    <div>
+                        <h4>Perbaikan Perspektif (Pemindai Dokumen)</h4>
+                        <p>Luruskan foto dokumen yang miring dengan menyeret 4 sudut, mirip pemindai dokumen. Mendukung JPG, PNG, WEBP, dan PDF, diproses lokal di peramban.</p>
+                    </div>
+                    <a href="./perspective-fix/" class="btn-tool">Buka Perbaikan Perspektif</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Play Store -->
+        <div class="store-section" id="playstore">
+            <h2 class="section-title">Play Store</h2>
+            <p style="color: var(--text-light); margin-top: 5px; margin-bottom: 20px;">Aplikasi Android buatan Midieaje yang bisa dipasang gratis dari Google Play.</p>
+            <div class="app-list">
+            <article class="app-card">
+                <div class="app-head">
+                    <img src="https://play-lh.googleusercontent.com/r2WJP44tZWHnaHQeJGTEVbnv5CI2SKb_Y_7A8xLSHf_a8hYZOfZLuWmvJOKnKEW1_TfiHqwxQHtoE7UPw8Lv=w240-h480" alt="Logo Warkop Gaul POS" width="76" height="76">
+                    <div>
+                        <h3>Warkop Gaul POS</h3>
+                        <div class="app-meta">Aplikasi Android &middot; Produktivitas</div>
+                    </div>
+                </div>
+                <p class="app-desc">Aplikasi kasir (POS) praktis untuk warkop, kafe, dan UMKM. Transaksi cepat dengan manajemen meja, cetak struk lewat printer Bluetooth, QRIS pembayaran, manajemen produk dan stok, serta laporan penjualan harian sampai bulanan.</p>
+                <div class="shots">
+                        <img src="https://play-lh.googleusercontent.com/Nqf3L4KvyoM9HWkcAC5dXgeUmlVr3uw9gQdbnSMfIFfMpaj1B5ZKq6NVqh_qylvxNbFHlxqu5nDCREvnfSeOyw=w526-h296" alt="Tampilan Warkop Gaul POS" loading="lazy">
+                        <img src="https://play-lh.googleusercontent.com/dyfqxKQn_iToFHu_ZUke-enWDUZnIuTPYHLtkRjC6zV1fp9RPSa2wbjgOmH5_OHtf2GWOFE13DIob63QZCfUaHA=w526-h296" alt="Tampilan Warkop Gaul POS" loading="lazy">
+                        <img src="https://play-lh.googleusercontent.com/maKQfWM5MHs20gsuMiz71WtPRW8mRotbl5LiLojflszGm5yBQvq1zuhCeh_W6u1dsUOdz_gkhyLe4fgxfeyzOg=w526-h296" alt="Tampilan Warkop Gaul POS" loading="lazy">
+                        <img src="https://play-lh.googleusercontent.com/M2MgVrJvTxhlFvwBe6u-zPD6K968FJx3Dn59lapzgo7WAF5c6fa28v1jlGvoSo1WIHogwUojTNG32wNk3P3wSA=w526-h296" alt="Tampilan Warkop Gaul POS" loading="lazy">
+                </div>
+                <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.midieaje.warkopgaul" target="_blank" rel="noopener"><i class="fa-brands fa-google-play"></i> Dapatkan di Google Play</a>
+            </article>
+            <article class="app-card">
+                <div class="app-head">
+                    <img src="https://play-lh.googleusercontent.com/cgRwCOtR7ygV0aWuKJwlTtOjuWzCN0JN00FuvWJwFl8bjJp06XHx9TlHDOhx39JUob_nk1rJVQ1HXVH7hVBf=w240-h480" alt="Logo Timer Rental" width="76" height="76">
+                    <div>
+                        <h3>Timer Rental</h3>
+                        <div class="app-meta">Aplikasi Android &middot; Produktivitas</div>
+                    </div>
+                </div>
+                <p class="app-desc">Kelola timer sewa untuk banyak barang sekaligus. Cocok untuk rental PS, peralatan camping, kendaraan harian, warnet, dan studio. Ada notifikasi otomatis saat waktu hampir habis, hitungan lembur, tagihan otomatis, dan laporan omzet.</p>
+                <div class="shots">
+                        <img src="https://play-lh.googleusercontent.com/GoLE8LZavErpnqlDP_HBpYAFEDzbQewFmyRA9PfQnChMx7DUMDuaSprEK41K1HGDmmCXgCVvIp-UxtTI3PJ-z0U=w526-h296" alt="Tampilan Timer Rental" loading="lazy">
+                        <img src="https://play-lh.googleusercontent.com/M2_3omxflDLw-hMUdrc6Bwm2iUv6DOZ4E-9sk3yjMqZxSQy6s_tjsZMs35S0ONRUWhHVx4hC7oDsH4CfNHxBaGw=w526-h296" alt="Tampilan Timer Rental" loading="lazy">
+                        <img src="https://play-lh.googleusercontent.com/YlKZSm7Q1gosAcR78uR6jWrHd1mYWR5rYFfTACJMg0wd72MUJc8SGlS2lvJwmyZsYGGaN-ysf6xMeau3errTPg=w526-h296" alt="Tampilan Timer Rental" loading="lazy">
+                        <img src="https://play-lh.googleusercontent.com/tve58gXjtCc8qqj4ZXHqcDsaY07T7Ys7OZOm1yZo7GJcgAlHcbBjnvnLKcA1UxnQISnz7iWv-cy00zIS4_82E1U=w526-h296" alt="Tampilan Timer Rental" loading="lazy">
+                </div>
+                <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.midieaje.timerrental" target="_blank" rel="noopener"><i class="fa-brands fa-google-play"></i> Dapatkan di Google Play</a>
+            </article>
             </div>
         </div>
 
@@ -419,12 +570,10 @@
         <div class="music-grid">
             <div class="music-card">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/3H4CemfUPbg" title="
-Janji Bodoh" loading="lazy" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/3H4CemfUPbg" title="Midieaje - Janji Bodoh" loading="lazy" allowfullscreen></iframe>
                 </div>
                 <div class="music-info">
-                    <h4>
-Janji Bodoh</h4>
+                    <h4>Midieaje - Janji Bodoh</h4>
                 </div>
             </div>
             <div class="music-card">
@@ -437,22 +586,18 @@ Janji Bodoh</h4>
             </div>
             <div class="music-card">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/Pt62treejx0" title="
-Yang Punya Segalanya (Music Video 1)" loading="lazy" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/Pt62treejx0" title="Midieaje - Yang Punya Segalanya (Music Video 1)" loading="lazy" allowfullscreen></iframe>
                 </div>
                 <div class="music-info">
-                    <h4>
-Yang Punya Segalanya (Music Video 1)</h4>
+                    <h4>Midieaje - Yang Punya Segalanya (Music Video 1)</h4>
                 </div>
             </div>
             <div class="music-card">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/7VU9SBgLW4U" title="
-Luka Terindah (Music Video 2)" loading="lazy" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/7VU9SBgLW4U" title="Midieaje - Luka Terindah (Music Video 2)" loading="lazy" allowfullscreen></iframe>
                 </div>
                 <div class="music-info">
-                    <h4>
-Luka Terindah (Music Video 2)</h4>
+                    <h4>Midieaje - Luka Terindah (Music Video 2)</h4>
                 </div>
             </div>
         </div>
