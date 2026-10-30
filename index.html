@@ -175,6 +175,17 @@
             transition: transform 0.2s, box-shadow 0.2s;
         }
 
+        a.category-card {
+            display: block;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a.category-card:focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 3px;
+        }
+
         .category-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px rgba(0,0,0,0.08);
@@ -358,16 +369,16 @@
                 <h3>Daily Activity</h3>
                 <p>Dokumentasi aktivitas harian dan momen seru sehari-hari.</p>
             </div>
-            <div class="category-card">
+            <a class="category-card" href="https://www.youtube.com/playlist?list=PLXiFhi1j129AkoptqsILpSnra8sBmlIHg" target="_blank" rel="noopener">
                 <i class="fa-solid fa-chalkboard-user"></i>
                 <h3>Tutorial</h3>
                 <p>Panduan praktis, tips & trik seputar teknologi dan aplikasi.</p>
-            </div>
-            <div class="category-card">
+            </a>
+            <a class="category-card" href="https://www.youtube.com/playlist?list=PLXiFhi1j129BSUwERKnCMpAj2BAlpUAb0" target="_blank" rel="noopener">
                 <i class="fa-solid fa-music"></i>
                 <h3>Musik</h3>
                 <p>Karya lagu original, proyek audio, dan video musik.</p>
-            </div>
+            </a>
             <div class="category-card">
                 <i class="fa-solid fa-gamepad"></i>
                 <h3>Hobi</h3>
@@ -393,6 +404,13 @@
                     </div>
                     <a href="./alatpdf/" class="btn-tool">Buka Alat PDF</a>
                 </div>
+                <div class="tool-card">
+                    <div>
+                        <h4>Aplikasi Silsilah Keluarga</h4>
+                        <p>Buat pohon keluarga dalam satu berkas HTML dengan data di Google Sheets. Unduh kode, panduan lengkap, dan berkas aplikasinya.</p>
+                    </div>
+                    <a href="./silsilah-keluarga/" class="btn-tool">Buka Silsilah Keluarga</a>
+                </div>
             </div>
         </div>
 
@@ -401,7 +419,17 @@
         <div class="music-grid">
             <div class="music-card">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/A9xsuLbyk88" title="Istriku - Midieaje" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/3H4CemfUPbg" title="
+Janji Bodoh" loading="lazy" allowfullscreen></iframe>
+                </div>
+                <div class="music-info">
+                    <h4>
+Janji Bodoh</h4>
+                </div>
+            </div>
+            <div class="music-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/A9xsuLbyk88" title="Midieaje - Istriku (Official Music Video)" loading="lazy" allowfullscreen></iframe>
                 </div>
                 <div class="music-info">
                     <h4>Midieaje - Istriku (Official Music Video)</h4>
@@ -409,18 +437,22 @@
             </div>
             <div class="music-card">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/i0ciylhREKk" title="Masih Bernyawa - Midieaje" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/Pt62treejx0" title="
+Yang Punya Segalanya (Music Video 1)" loading="lazy" allowfullscreen></iframe>
                 </div>
                 <div class="music-info">
-                    <h4>Midieaje - Masih Bernyawa (Music Video)</h4>
+                    <h4>
+Yang Punya Segalanya (Music Video 1)</h4>
                 </div>
             </div>
             <div class="music-card">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/AN3EwJ7Srd0" title="Selama Kau Mau Berjalan - Midieaje" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/7VU9SBgLW4U" title="
+Luka Terindah (Music Video 2)" loading="lazy" allowfullscreen></iframe>
                 </div>
                 <div class="music-info">
-                    <h4>Midieaje - Selama Kau Mau Berjalan</h4>
+                    <h4>
+Luka Terindah (Music Video 2)</h4>
                 </div>
             </div>
         </div>
