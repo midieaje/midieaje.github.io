@@ -258,6 +258,22 @@
             font-weight: 500;
         }
 
+        /* Slot iklan AdSense */
+        .ad-slot {
+            margin: 0 0 50px;
+            text-align: center;
+            min-height: 120px;
+        }
+
+        .ad-slot .ad-label {
+            display: block;
+            font-size: 0.72rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-light);
+            margin-bottom: 6px;
+        }
+
         /* Play Store */
         .store-section {
             margin-bottom: 50px;
@@ -493,6 +509,8 @@
             </div>
         </div>
 
+        <div class="ad-slot" data-ad="atas"></div>
+
         <!-- Alat & Utility Web -->
         <div class="tools-section" id="tools">
             <h2 class="section-title">Alat Web Gratis</h2>
@@ -565,6 +583,8 @@
             </div>
         </div>
 
+        <div class="ad-slot" data-ad="tengah"></div>
+
         <!-- Karya Musik Rilisan -->
         <h2 class="section-title" id="musik">Music Video Pilihan</h2>
         <div class="music-grid">
@@ -602,6 +622,8 @@
             </div>
         </div>
 
+        <div class="ad-slot" data-ad="bawah"></div>
+
     </div>
 
     <!-- Footer -->
@@ -612,6 +634,40 @@
         </div>
         <p>&copy; 2026 Midieaje. All Rights Reserved.</p>
     </footer>
+
+    <!-- Iklan AdSense: unit tampilan responsif -->
+    <script>
+        // Isi Ad Slot ID dari AdSense (Iklan > Menurut unit iklan > Iklan tampilan).
+        // Slot yang dikosongkan ('') tidak akan menampilkan iklan.
+        // Disarankan membuat 3 unit terpisah agar laporan per posisi terbaca.
+        const ADSENSE_CLIENT = "ca-pub-3644380193150166";
+        const ADSENSE_SLOTS = {
+            atas:   "3107145067",   // setelah Topik Konten
+            tengah: "3107145067",   // setelah Play Store
+            bawah:  "3107145067"    // setelah Music Video
+        };
+
+        document.querySelectorAll('.ad-slot').forEach(function (box) {
+            const slotId = ADSENSE_SLOTS[box.dataset.ad];
+            if (!slotId) { box.style.display = 'none'; return; }
+
+            const label = document.createElement('span');
+            label.className = 'ad-label';
+            label.textContent = 'Iklan';
+
+            const ins = document.createElement('ins');
+            ins.className = 'adsbygoogle';
+            ins.style.display = 'block';
+            ins.setAttribute('data-ad-client', ADSENSE_CLIENT);
+            ins.setAttribute('data-ad-slot', slotId);
+            ins.setAttribute('data-ad-format', 'auto');
+            ins.setAttribute('data-full-width-responsive', 'true');
+
+            box.appendChild(label);
+            box.appendChild(ins);
+            try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch (e) {}
+        });
+    </script>
 
 </body>
 </html>
