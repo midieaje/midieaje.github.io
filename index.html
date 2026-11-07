@@ -7,7 +7,8 @@
 
     <!-- TAG META ADSENSE -->
     <meta name="google-adsense-account" content="ca-pub-3644380193150166">
-    <meta name="description" content="Website resmi Midieaje. Seputar Daily Activity, Tutorial, Musik, Hobi, Online Shop, dan Alat Web Gratis.">
+    <meta name="description" content="Website resmi Midieaje: lagu original, video musik, aplikasi Android, dan alat web gratis seperti Alat PDF, Karaoke Studio, Silsilah Keluarga, dan Perbaikan Perspektif.">
+    <link rel="canonical" href="https://midieaje.github.io/">
     
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3644380193150166"
      crossorigin="anonymous"></script>
@@ -258,6 +259,72 @@
             font-weight: 500;
         }
 
+        /* Tentang & Dukungan */
+        .about-section {
+            background: var(--card-bg);
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+        }
+
+        .about-section p {
+            color: var(--text);
+            margin-top: 12px;
+            max-width: 78ch;
+        }
+
+        .about-section ul {
+            margin: 12px 0 0 20px;
+            color: var(--text);
+        }
+
+        .about-section li {
+            margin-bottom: 4px;
+        }
+
+        .support-box {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 50px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .support-box h2 {
+            font-size: 1.4rem;
+            margin-bottom: 6px;
+        }
+
+        .support-box p {
+            color: #94a3b8;
+            max-width: 60ch;
+        }
+
+        .btn-support {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #f59e0b;
+            color: #1c1200;
+            padding: 12px 26px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .btn-support:hover {
+            transform: translateY(-2px);
+            background: #fbbf24;
+        }
+
         /* Slot iklan AdSense */
         .ad-slot {
             margin: 0 0 50px;
@@ -474,6 +541,19 @@
 
     <div class="container">
 
+        <!-- Tentang -->
+        <section class="about-section" id="tentang">
+            <h2 class="section-title">Tentang Midieaje</h2>
+            <p>Midieaje adalah ruang kreasi pribadi yang berisi lagu original, video musik, aplikasi Android, dan alat web gratis. Semua yang ada di sini dibuat sendiri, dari menulis lagu sampai membuat aplikasi dan alat yang dipakai sehari-hari.</p>
+            <p>Halaman ini berfungsi sebagai pusat untuk menemukan semuanya:</p>
+            <ul>
+                <li><strong>Musik:</strong> lagu dan video musik original yang dirilis di channel YouTube Midieaje.</li>
+                <li><strong>Aplikasi Android:</strong> Warkop Gaul POS untuk kasir usaha kecil, dan Timer Rental untuk mengelola waktu sewa, keduanya tersedia di Google Play.</li>
+                <li><strong>Alat web gratis:</strong> pengolah PDF, pembuat teks karaoke berwarna, aplikasi silsilah keluarga, dan perbaikan perspektif foto dokumen. Semuanya berjalan langsung di peramban Anda tanpa mengunggah berkas ke server.</li>
+                <li><strong>Tutorial:</strong> panduan penggunaan teknologi dan aplikasi dalam bentuk video.</li>
+            </ul>
+        </section>
+
         <!-- Kategori Utama -->
         <h2 class="section-title" id="kategori">Topik Konten</h2>
         <div class="grid-categories">
@@ -531,12 +611,12 @@
                     </div>
                     <a href="./silsilah-keluarga/" class="btn-tool">Buka Silsilah Keluarga</a>
                 </div>
-				<div class="tool-card">
+                <div class="tool-card">
                     <div>
-                        <h4>Aplikasi Karaoke Studio</h4>
-                        <p>Aplikasi web praktis untuk membuat teks karaoke.</p>
+                        <h4>Karaoke Studio (Teks Karaoke Berwarna)</h4>
+                        <p>Buat teks karaoke yang warnanya berubah mengikuti lagu: tandai awal tiap baris, lalu rekam warna dengan menggeser mouse. Berjalan di peramban.</p>
                     </div>
-                    <a href="./karaoke-studio/" class="btn-tool">Buka Aplikasi Karaoke Studio</a>
+                    <a href="./karaoke-studio/" class="btn-tool">Buka Karaoke Studio</a>
                 </div>
                 <div class="tool-card">
                     <div>
@@ -631,6 +711,15 @@
 
         <div class="ad-slot" data-ad="bawah"></div>
 
+        <!-- Dukung via Saweria -->
+        <section class="support-box" id="dukung">
+            <div>
+                <h2>Dukung Midieaje</h2>
+                <p>Kalau karya, aplikasi, atau alat di sini bermanfaat untuk Anda, Anda bisa mendukung lewat Saweria. Dukungan Anda membantu saya terus membuat lagu dan aplikasi baru.</p>
+            </div>
+            <a class="btn-support" href="https://saweria.co/Midieaje" target="_blank" rel="noopener"><i class="fa-solid fa-mug-hot"></i> Traktir via Saweria</a>
+        </section>
+
     </div>
 
     <!-- Footer -->
@@ -638,7 +727,9 @@
         <div class="social-links">
             <a href="https://www.youtube.com/@midieaje" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
             <a href="https://github.com/midieaje" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://saweria.co/Midieaje" target="_blank" rel="noopener" title="Saweria"><i class="fa-solid fa-mug-hot"></i></a>
         </div>
+        <p style="margin-bottom:8px"><a href="./kebijakan-privasi.html" style="color:#cbd5e1;margin:0 8px">Kebijakan Privasi</a><a href="./kontak.html" style="color:#cbd5e1;margin:0 8px">Kontak</a></p>
         <p>&copy; 2026 Midieaje. All Rights Reserved.</p>
     </footer>
 
@@ -649,8 +740,8 @@
         // Disarankan membuat 3 unit terpisah agar laporan per posisi terbaca.
         const ADSENSE_CLIENT = "ca-pub-3644380193150166";
         const ADSENSE_SLOTS = {
-            atas:   "3107145067",   // setelah Topik Konten
-            tengah: "3107145067",   // setelah Play Store
+            atas:   "",             // dinonaktifkan: area ini hanya berisi tautan/navigasi
+            tengah: "",             // dinonaktifkan: tinggalkan kosong agar iklan tidak melebihi konten
             bawah:  "3107145067"    // setelah Music Video
         };
 
